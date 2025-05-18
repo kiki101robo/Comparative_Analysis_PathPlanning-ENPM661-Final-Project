@@ -1,6 +1,5 @@
 # Comparative_Analysis_PathPlanning-ENPM661-Final-Project
-
-**“Quantitative Comparison of Various Path-Planning Algorithms Implemented For Non-Holonomic Robots.”**  
+ 
 The study benchmarks seven planners (A*, Weighted A*, PRM + Dijkstra, PRM + Weighted A*, RRT, RRT + A*, RRT*) on 2-D obstacle maps while respecting differential-drive kinematics. This section explains **how the repository mirrors – and extends – the methodology in the paper and summarises the final insights.**
 
 ## Features
