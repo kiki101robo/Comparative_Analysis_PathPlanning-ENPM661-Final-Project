@@ -17,8 +17,8 @@ The study benchmarks seven planners (A*, Weighted A*, PRM + Dijkstra, PRM + Weig
 ├── planners/               # your planner implementations (rrt.py, astar.py, …)
 ├── map/                    # eight MapEnv subclasses with obstacle layouts
 ├── utils.py                # metric helpers
-├── evaluate\_consistency.py # full benchmark runner
-├── validate\_all\_runners.py # quick smoke-tests
+├── evaluate_consistency.py # full benchmark runner
+├── validate_all_runners.py # quick smoke-tests
 ├── plots.py                # turns eval\_cache.json → figures
 └── README.md               # this file
 
