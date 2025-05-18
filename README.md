@@ -5,7 +5,7 @@ The study benchmarks seven planners (A*, Weighted A*, PRM + Dijkstra, PRM + Weig
 ## Features
 * Runs **seven planners** (RRT, RRT\*, PRM\_Dijkstra, PRM\_Weighted_A\*, RRT\_A\*, A\*, Weighted\_A\*) across **eight obstacle maps** with one command.  
 * Caches previous results and only re-runs jobs whose planner source has changed.  
-* Computes per-run metrics (success, runtime, path length, jerkiness, safety, …).   
+* Computes per-run metrics (success, runtime, path length, jerkiness, safety, etc,.).   
 * Parallel evaluation with Python’s `asyncio` + `ProcessPoolExecutor` for near-linear speed-ups on multi-core CPUs.
 
 ---
