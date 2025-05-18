@@ -29,7 +29,7 @@ The study benchmarks seven planners (A*, Weighted A*, PRM + Dijkstra, PRM + Weig
 ## Installation
 ```bash
 git clone https://github.com/kiki101robo/Comparative_Analysis_PathPlanning-ENPM661-Final-Project.git
-cd Comparative_Analysis_PathPlanning-ENPM661-Final-Project
+cd Comparative_Analysis_PathPlanning-ENPM661-Final-Project/final_scripts
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ````
