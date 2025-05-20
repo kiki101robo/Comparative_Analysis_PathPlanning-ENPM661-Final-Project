@@ -18,7 +18,6 @@ The study benchmarks seven planners (A*, Weighted A*, PRM + Dijkstra, PRM + Weig
 ├── map/                    # eight MapEnv subclasses with obstacle layouts
 ├── utils.py                # metric helpers
 ├── evaluate_consistency.py # full benchmark runner
-├── validate_all_runners.py # quick smoke-tests
 ├── plots.py                # turns eval\_cache.json → figures
 └── README.md               # this file
 
@@ -63,13 +62,6 @@ python validate_all_runners.py
 6. Skips unchanged planners on subsequent runs; writes `eval_cache.json`.
 7. Prints both per-map comparisons and cross-map summaries to the console.
 
-### `validate_all_runners.py`
-
-1. Loads a single reference map and hard-coded start/goal pose.
-2. Iterates through each planner in `PLANNERS`.
-3. Dynamically imports `planners.<name>` and calls its `run_planner()`.
-4. Asserts the return type to catch API mismatches.
-5. Reports / per planner together with any traceback.
 
 ### `plots.py`
 
@@ -83,8 +75,7 @@ python validate_all_runners.py
 
 1. `compute_path_length()` – Euclidean sum over way-points.
 2. `compute_path_jerkiness()` – mean absolute heading change.
-3. `compute_path_safety()` – minimum signed distance to obstacles.
-4. Accepts plain `(x, y)` tuples **or** objects with `.x` / `.y` attributes.
+3. Accepts plain `(x, y)` tuples **or** objects with `.x` / `.y` attributes.
 
 ### `userinput.py`
 
@@ -120,6 +111,6 @@ Charts (`figure_1.pdf`, …) appear in the working directory.
 
 ### Where we extended
 
-* Added **jerkiness** as a fifth metric to capture path smoothness — critical for real robot actuation.
+* Added **jerkiness** as a anlternative metric to capture path smoothness — critical for real robot actuation.
 * Replaced MATLAB scripts with a fully-parallel Python pipeline and automatic result caching, cutting wall-time from hours to minutes on an 8-core machine.
 * Swapped purely synthetic C-space images for **eight hand-drawn maps** containing cul-de-sacs and bottlenecks that break visibility-graph assumptions.
